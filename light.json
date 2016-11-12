@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/schema#",
+  "id": "/light.json",
+  "type": "object",
+  "name": "light",
+  "required": ["command_topic"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "MQTT Switch"
+    },
+    "state_topic": {
+      "type": "string"
+    },
+    "command_topic": {
+      "type": "string"
+    },
+    "brightness_state_topic": {
+      "type": "string"
+    },
+    "brightness_command_topic": {
+      "type": "string"
+    },
+    "rgb_state_topic": {
+      "type": "string"
+    },
+    "rgb_command_topic": {
+      "type": "string"
+    },
+    "color_temp_state_topic": {
+      "type": "string"
+    },
+    "color_temp_command_topic": {
+      "type": "string"
+    },
+    "state_value_template": {
+      "type": "string"
+    },
+    "brightness_value_template": {
+      "type": "strings"
+    },
+    "rgb_value_template": {
+      "type": "string"
+    },
+    "color_temp_value_template": {
+      "type": "string"
+    },
+    "brightness_scale": {
+      "type": "integer",
+      "default": 255,
+      "minimum": 0,
+      "maximum": 255
+    },
+    "payload_on": {
+      "type": "string",
+      "default": "ON"
+    },
+    "payload_off": {
+      "type": "string",
+      "default": "OFF"
+    },
+    "optimistic": {
+      "type": "boolean",
+      "default": true
+    },
+    "qos": {
+      "type": "integer",
+      "default": 0,
+      "enum": [0, 1, 2]
+    }
+  }
+}
