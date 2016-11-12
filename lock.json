@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/schema#",
+  "id": "/lock.json",
+  "type": "object",
+  "name": "lock",
+  "required": ["command_topic"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "MQTT Lock"
+    },
+    "state_topic": {
+      "type": "string"
+    },
+    "command_topic": {
+      "type": "string"
+    },
+    "payload_lock": {
+      "type": "string",
+      "default": "LOCK"
+    },
+    "payload_unlock": {
+      "type": "string",
+      "default": "UNLOCK"
+    },
+    "optimistic": {
+      "type": "boolean",
+      "default": true
+    },
+    "qos": {
+      "type": "integer",
+      "default": 0,
+      "enum": [0, 1, 2]
+    },
+    "retain": {
+      "type": "boolean",
+      "default": true
+    },
+    "value_template": {
+      "type": "string"
+    }
+  }
+}
