@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/schema#",
+  "id": "/switch.json",
+  "type": "object",
+  "name": "switch",
+  "required": ["command_topic"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "MQTT Switch"
+    },
+    "state_topic": {
+      "type": "string"
+    },
+    "command_topic": {
+      "type": "string"
+    },
+    "payload_on": {
+      "type": "string",
+      "default": "ON"
+    },
+    "payload_off": {
+      "type": "string",
+      "default": "OFF"
+    },
+    "optimistic": {
+      "type": "boolean",
+      "default": true
+    },
+    "qos": {
+      "type": "integer",
+      "default": 0,
+      "enum": [0, 1, 2]
+    },
+    "retain": {
+      "type": "boolean",
+      "default": true
+    },
+    "value_template": {
+      "type": "string"
+    }
+  }
+}
