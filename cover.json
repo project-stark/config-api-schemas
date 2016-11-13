@@ -1,0 +1,61 @@
+{
+  "": "https://json-schema.org/schema#",
+  "id": "/cover.json",
+  "type": "object",
+  "name": "cover",
+  "required": [
+    "command_topic"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "MQTT Cover"
+    },
+    "state_topic": {
+      "type": "string"
+    },
+    "command_topic": {
+      "type": "string"
+    },
+    "payload_open": {
+      "type": "string",
+      "default": "OPEN"
+    },
+    "payload_close": {
+      "type": "string",
+      "default": "CLOSE"
+    },
+    "payload_stop": {
+      "type": "string",
+      "default": "STOP"
+    },
+    "state_open": {
+      "type": "string",
+      "default": "open"
+    },
+    "state_closed": {
+      "type": "string",
+      "default": "closed"
+    },
+    "optimistic": {
+      "type": "boolean",
+      "default": true
+    },
+    "qos": {
+      "type": "integer",
+      "default": 0,
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "retain": {
+      "type": "boolean",
+      "default": true
+    },
+    "value_template": {
+      "type": "string"
+    }
+  }
+}
