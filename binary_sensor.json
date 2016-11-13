@@ -1,0 +1,59 @@
+{
+  "": "https://json-schema.org/schema#",
+  "id": "/binary_sensor.json",
+  "type": "object",
+  "name": "binary_sensor",
+  "required": [
+    "state_topic"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "MQTT Sensor"
+    },
+    "state_topic": {
+      "type": "string"
+    },
+    "payload_on": {
+      "type": "string",
+      "default": "ON"
+    },
+    "payload_off": {
+      "type": "string",
+      "default": "OFF"
+    },
+    "qos": {
+      "type": "integer",
+      "default": 0,
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "sensor_class": {
+      "type": "string",
+      "default": "None",
+      "enum": [
+        "cold",
+        "connectivity",
+        "gas",
+        "heat",
+        "light",
+        "moisture",
+        "motion",
+        "moving",
+        "occupancy",
+        "opening",
+        "power",
+        "safety",
+        "smoke",
+        "sound",
+        "vibration"
+      ]
+    },
+    "value_template": {
+      "type": "string"
+    }
+  }
+}
