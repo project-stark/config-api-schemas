@@ -3,7 +3,9 @@
   "id": "/lock.json",
   "type": "object",
   "name": "lock",
-  "required": ["command_topic"],
+  "required": [
+    "command_topic"
+  ],
   "properties": {
     "name": {
       "type": "string",
@@ -30,7 +32,11 @@
     "qos": {
       "type": "integer",
       "default": 0,
-      "enum": [0, 1, 2]
+      "enum": [
+        0,
+        1,
+        2
+      ]
     },
     "retain": {
       "type": "boolean",

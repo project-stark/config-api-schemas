@@ -3,7 +3,9 @@
   "id": "/light.json",
   "type": "object",
   "name": "light",
-  "required": ["command_topic"],
+  "required": [
+    "command_topic"
+  ],
   "properties": {
     "name": {
       "type": "string",
@@ -66,7 +68,11 @@
     "qos": {
       "type": "integer",
       "default": 0,
-      "enum": [0, 1, 2]
+      "enum": [
+        0,
+        1,
+        2
+      ]
     }
   }
 }
