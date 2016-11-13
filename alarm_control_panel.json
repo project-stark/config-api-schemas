@@ -1,0 +1,46 @@
+{
+  "": "https://json-schema.org/schema#",
+  "id": "/alarm_control_panel.json",
+  "type": "object",
+  "name": "alarm_control_panel",
+  "required": [
+    "state_topic",
+    "command_topic"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "MQTT Alarm"
+    },
+    "state_topic": {
+      "type": "string"
+    },
+    "command_topic": {
+      "type": "string"
+    },
+    "qos": {
+      "type": "integer",
+      "default": 0,
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "payload_disarm": {
+      "type": "string",
+      "default": "DISARM"
+    },
+    "payload_arm_home": {
+      "type": "string",
+      "default": "ARM_HOME"
+    },
+    "payload_arm_away": {
+      "type": "string",
+      "default": "ARM_AWAY"
+    },
+    "code": {
+      "type": "string"
+    }
+  }
+}
