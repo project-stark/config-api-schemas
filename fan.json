@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/schema#",
+  "id": "/fan.json",
+  "type": "object",
+  "name": "fan",
+  "required": [
+    "command_topic"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "MQTT Fan"
+    },
+    "state_topic": {
+      "type": "string"
+    },
+    "command_topic": {
+      "type": "string"
+    },
+    "payload_on": {
+      "type": "string",
+      "default": "ON"
+    },
+    "payload_off": {
+      "type": "string",
+      "default": "OFF"
+    },
+    "state_value_template": {
+      "type": "string"
+    },
+    "optimistic": {
+      "type": "boolean",
+      "default": true
+    },
+    "qos": {
+      "type": "integer",
+      "default": 0,
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "retain": {
+      "type": "boolean",
+      "default": true
+    },
+    "oscillation_state_topic": {
+      "type": "string"
+    },
+    "oscillation_command_topic": {
+      "type": "string"
+    },
+    "payload_oscillation_on": {
+      "type": "string",
+      "default": "oscillate_on"
+    },
+    "payload_oscillation_off": {
+      "type": "string",
+      "default": "oscillate_off"
+    },
+    "oscillation_value_template": {
+      "type": "string"
+    },
+    "speed_state_topic": {
+      "type": "string",
+    },
+    "speed_command_topic": {
+      "type": "string"
+    },
+    "payload_low_speed": {
+      "type": "string"
+    },
+    "payload_medium_speed": {
+      "type": "string"
+    },
+    "payload_high_speed": {
+      "type": "string"
+    },
+    "speed_value_template": {
+      "type": "string"
+    },
+    "speeds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "off",
+          "low",
+          "med",
+          "high"
+        ]
+      },
+      "additionalItems": false,
+      "uniqueItems": true,
+      "maxItems": 4
+    }
+  }
+}
