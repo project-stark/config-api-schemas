@@ -1,5 +1,5 @@
 {
-  "": "https://json-schema.org/schema#",
+  "$schema": "https://json-schema.org/schema#",
   "id": "/alarm_control_panel.json",
   "type": "object",
   "name": "alarm_control_panel",

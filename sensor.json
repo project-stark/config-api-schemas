@@ -1,5 +1,5 @@
 {
-  "": "https://json-schema.org/schema#",
+  "$schema": "https://json-schema.org/schema#",
   "id": "/sensor.json",
   "type": "object",
   "name": "sensor",
